@@ -1,16 +1,19 @@
-const puppeteer = require('puppeteer');
-
+const puppeteer = require("puppeteer");
 var pdf = async (html = "") => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  try {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
-  await page.setContent(html);
+    await page.setContent(html);
 
-  const pdfBuffer = await page.pdf();
+    const pdfBuffer = await page.pdf();
 
-  await page.close();
-  await browser.close();
+    await page.close();
+    await browser.close();
 
-  return pdfBuffer;
+    return pdfBuffer;
+  } catch (e) {
+    pdf = e;
+  }
 };
 module.exports = pdf;
