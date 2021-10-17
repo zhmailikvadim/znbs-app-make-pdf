@@ -6,16 +6,14 @@ const app = express();
 
 app.use("/", async (req, res) => {
   try {
-    const html = `<html>
-                    <head>
-                      <title>Test Project PDF</title>
-                    </head>
-                    <body>
-                      Project information will  be here
-                    </body>
-                  </html>`;
-
-    const pdf = await generatePDF(html);
+     const pdf = await generatePDF(`<html>
+    <head>
+      <title>Test Project PDF</title>
+    </head>
+    <body>
+      Project information will  be here
+    </body>
+  </html>`);
 
     await res.set("Content-Type", "application/pdf");
     res.send(pdf);
