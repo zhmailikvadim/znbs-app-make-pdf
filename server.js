@@ -1,29 +1,26 @@
 const express = require("express");
-const generatePDF = require("./src/lib/generatePDF.js");
-const puppeteer = require("puppeteer");
+
+var pdf = require("html-pdf");
 
 const app = express();
 
-app.use("/", async (req, res) => {
-  try {
-     const pdf = await generatePDF(`<html>
-    <head>
-      <title>Test Project PDF</title>
-    </head>
-    <body>
-      Project information will  be here
-    </body>
-  </html>`);
+var options = { format: "Letter" };
 
-    await res.set("Content-Type", "application/pdf");
-    res.send(pdf);
-  } catch (e) {
-    res.send(e);
-  }
+app.use("/", async (req, res) => {
+  const html = `<html><head><title>Test Project PDF</title>
+                  </head><body>
+                    Project information will  be here
+                  </body></html>`;
+
+  pdf.create(html).toBuffer(function (err, buffer) {
+    //console.log('This is a buffer:', Buffer.isBuffer(buffer));
+    res.set("Content-Type", "application/pdf");
+    res.send(buffer);
+  });
 });
 
 const port = process.env.PORT || 4000;
 
 app.listen(port, function () {
-  console.log(`myapp listening on port ${port}`);
+  console.log(` listening on port ${port}`);
 });
