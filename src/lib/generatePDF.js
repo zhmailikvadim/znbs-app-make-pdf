@@ -1,6 +1,6 @@
-import puppeteer from "puppeteer";
+const puppeteer = require('puppeteer');
 
-export default async (html = "") => {
+var pdf = async (html = "") => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -13,3 +13,4 @@ export default async (html = "") => {
 
   return pdfBuffer;
 };
+module.exports = pdf;
