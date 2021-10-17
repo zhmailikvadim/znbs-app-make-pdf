@@ -13,7 +13,6 @@ app.use("/", async (req, res) => {
                   </body></html>`;
 
   pdf.create(html).toBuffer(function (err, buffer) {
-    //console.log('This is a buffer:', Buffer.isBuffer(buffer));
     res.set("Content-Type", "application/pdf");
     res.send(buffer);
   });
@@ -22,5 +21,5 @@ app.use("/", async (req, res) => {
 const port = process.env.PORT || 4000;
 
 app.listen(port, function () {
-  console.log(` listening on port ${port}`);
+  console.log(`listening on port ${port}`);
 });
