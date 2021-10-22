@@ -4,29 +4,10 @@ var pdf = require("html-pdf");
 
 const app = express();
 
-var options = {
-    format: "Letter"
-};
-
 app.use("/", async (req, res) => {
-    const ProjectUUID = req.query.ProjectUUID;
     const ProjectID = req.query.ProjectID;
     const ProjectDescription = req.query.ProjectDescription;
-    const DevStatus = req.query.DevStatus;
-    const EffortStatus = req.query.EffortStatus;
-    const FunctionalExpert = req.query.FunctionalExpert;
-    const NovartisSME = req.query.NovartisSME;
-    const ProjectEndDate = req.query.ProjectEndDate;
-    const ProjectManager = req.query.ProjectManager;
     const ProjectManagerTxt = req.query.ProjectManagerTxt;
-    const ProjectStatusName = req.query.ProjectStatusName;
-    const ProposedDevEndDate = req.query.ProposedDevEndDate;
-    const ProposedDevStartDate = req.query.ProposedDevStartDate;
-    const RqEffortDate = req.query.RqEffortDate;
-    const SbEffortDate = req.query.SbEffortDate;
-    const TechnicalExpert = req.query.TechnicalExpert;
-    const TechnicalSME = req.query.TechnicalSME;
-    const Comments = req.query.Comments;
 
     let tableHTML = `<table><tbody>`;
     for (var param in req.query) {
