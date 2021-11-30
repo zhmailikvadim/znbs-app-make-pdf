@@ -18,7 +18,7 @@ app.use("/", async (req, res) => {
     html = `
               <html>
               <head>
-              <title>Project TEST CD/CI </title>
+              <title>Project TEST CD/CI TEST1</title>
               <style>
                 body {
                   padding: 40px;
