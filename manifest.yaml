@@ -1,3 +1,4 @@
 applications:
   - name: znbsmakepdf
     memory: 512M
+    command: node server.js
