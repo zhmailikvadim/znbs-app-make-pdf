@@ -1,0 +1,3 @@
+applications:
+  - name: znbs-make-pdf
+    memory: 512M
