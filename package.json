@@ -2,9 +2,9 @@
   "name": "znbs-app-make-pdf",
   "version": "1.0.0",
   "description": "test pdf",
-  "main": "znbsappmakepdf/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node znbsappmakepdf/server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
