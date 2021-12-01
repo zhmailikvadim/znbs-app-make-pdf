@@ -4,7 +4,7 @@
   "description": "test pdf",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "cf start znbsmakepdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
