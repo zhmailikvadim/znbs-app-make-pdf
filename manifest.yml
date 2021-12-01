@@ -1,5 +1,5 @@
 applications:
-  - name: znbsappmakepdf
-    memory: 512M
-    random-route: true
-    command: npm start
+- name: znbsappmakepdf
+  random-route: true
+  path: znbsappmakepdf
+  memory: 512M
