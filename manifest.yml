@@ -2,4 +2,4 @@ applications:
 - name: znbsappmakepdf
   random-route: true
   path: znbsappmakepdf
-  memory: 500M
+  memory: 512M
