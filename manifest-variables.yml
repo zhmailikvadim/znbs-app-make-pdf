@@ -1,4 +1,0 @@
-applications:
-  - name: znbs-app-make-pdf
-    memory: 512M
-    random-route: true

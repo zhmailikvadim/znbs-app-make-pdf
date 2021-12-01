@@ -2,3 +2,4 @@ applications:
   - name: znbsappmakepdf
     memory: 512M
     random-route: true
+    command: node server.js

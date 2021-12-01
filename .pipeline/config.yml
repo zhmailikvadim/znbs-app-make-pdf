@@ -39,4 +39,4 @@ stages:
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com/'
         appName: 'znbsmakepdf'
         manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+        credentialsId: 'cf-credentials'
